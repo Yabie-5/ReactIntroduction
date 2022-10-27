@@ -10,7 +10,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-      Hello World v1.0
+      Hello World v1.1
     </div>
   );
 }
