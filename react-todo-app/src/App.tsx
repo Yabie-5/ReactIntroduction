@@ -1,31 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
-import Loader from './components/Loader';
-import Todo from './components/Loader';
+import TodoList from './components/TodoList';
 
 function App() {
-  const [todos, setTodos] = useState([])
-  const [error, setError] = useState({})
-
-  interface Todo {
-    title: string;
-    id: number;
-    completed: boolean;
-
-  }
-
-  // ここの内容をレンダリング
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(response => response.json())
-    .then(res => setTodos(res.slice(0,10)))
-    .catch(err => setError(err))
-  }, [])
+  const [todos, setTodos] = useState(['Todo1'])
 
   return (
     <div className="App">
-     {todos.length > 0 ? todos.map((todo: Todo) => 
-     <Todo />) : (<Loader />)}
+      <TodoList todos={todos}/>
+      <input></input>
+      <button>タスクを追加</button>
+      <button>完了したタスク</button>
     </div>
   );
 }
