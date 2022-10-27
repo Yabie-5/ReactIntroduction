@@ -10,8 +10,8 @@ function App() {
   }, [])
   return (
     <div className="App">
-      Hello World: v1.1
-      <button></button>
+      Hello World v1.2
+      <button>ここを押して</button>
     </div>
   );
 }
