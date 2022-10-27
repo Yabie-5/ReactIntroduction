@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       Hello World: v1.1
-      <button></button>
+      <button>ここを押して</button>
     </div>
   );
 }
