@@ -1,17 +1,12 @@
-import { useState } from 'react';
-import './App.css';
-import TodoList from './components/TodoList';
+import Todo from "./components/Todo";
 
-function App() {
-  const [todos, setTodos] = useState(['Todo1','Todo2'])
-
+const App = () => {
   return (
-    <div className="App">
-      <TodoList todos={todos}/>
-      <button>タスクを追加</button>
-      <button>完了したタスク</button>
-    </div>
+    <>
+      <h2>- Todo List -</h2>
+      <Todo />
+    </>
   );
-}
+};
 
 export default App;
